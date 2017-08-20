@@ -47,7 +47,7 @@
                         <button class="btn btn-info" onclick="googleSignout()">Google sign out</button>
                     </li>
                     <li>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Create a New Card</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Create New Card</button>
                     </li>
                 </ul>
             </div>
@@ -86,7 +86,7 @@
             </div>
             </div>
         </div>
-        </div> 
+        </div>
 
     <!-- Page Content -->
     <div class="container">
@@ -99,6 +99,9 @@
           </div>
           <div class="col-sm-3"></div>
         </div>
+    </div>
+    <div id="cardHolder">
+
     </div>
     <!-- /.container -->
 
@@ -121,6 +124,7 @@
           };
           firebase.initializeApp(config);
     </script>
+    <script src="js/createCard.js"></script>
     <script src='js/index.js'></script>
 </body>
 
