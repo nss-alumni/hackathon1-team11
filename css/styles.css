@@ -37,6 +37,7 @@
 }
 
 body {
+	height: 100vh;
   -webkit-perspective: 800px;
   -moz-perspective: 800px;
   perspective: 800px;
@@ -53,7 +54,8 @@ body {
   position: relative;
   margin: 0 auto;
   height: 300px;
-  width: 35%;
+  width: 85%;
+	float: left;
   border: 1px solid black;
   background-image: -webkit-linear-gradient(top, #ffffff 15%, #F94545 16%, #ffffff 16%, #ffffff 25%, #85b2d3 26%, #ffffff 26%, #ffffff 35%, #85b2d3 36%, #ffffff 36%, #ffffff 45%, #85b2d3 46%, #ffffff 46%, #ffffff 55%, #85b2d3 56%, #ffffff 56%, #ffffff 65%, #85b2d3 66%, #ffffff 66%, #ffffff 75%, #85b2d3 76%, #ffffff 76%, #ffffff 85%, #85b2d3 86%, #ffffff 86%, #ffffff 95%, #85b2d3 96%, #ffffff 96%);
   background-image: linear-gradient(to bottom, #ffffff 15%, #F94545 16%, #ffffff 16%, #ffffff 25%, #85b2d3 26%, #ffffff 26%, #ffffff 35%, #85b2d3 36%, #ffffff 36%, #ffffff 45%, #85b2d3 46%, #ffffff 46%, #ffffff 55%, #85b2d3 56%, #ffffff 56%, #ffffff 65%, #85b2d3 66%, #ffffff 66%, #ffffff 75%, #85b2d3 76%, #ffffff 76%, #ffffff 85%, #85b2d3 86%, #ffffff 86%, #ffffff 95%, #85b2d3 96%, #ffffff 96%);
@@ -99,4 +101,9 @@ body {
   -ms-transform: rotateY(-180deg);
   -o-transform: rotateY(-180deg);
   transform: rotateY(-180deg);
+}
+.outterCard{
+	width: 40%;
+	height: 350px;
+	margin: auto;
 }

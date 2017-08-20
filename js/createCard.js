@@ -9,8 +9,29 @@ createCardBtn.addEventListener("click", createCard);
 function createCard(){
   console.log("This function works");
   console.log(cardHolder, cardTitleInput.value);
-  cardHolder.innerHTML += `<div class="card">
+  cardHolder.innerHTML += `
+  <div class="outterCard">
+  <div class="notecard">
+  <div class="front">
     <h2>${cardTitleInput.value}</h2>
     <p>${cardFrontInput.value}</p>
-  </div>`
+  </div>
+  <div class="back">
+    <p>${cardBackInput.value}</p>
+    <form>
+
+
+  </div>
+  </div>
+    <input type="radio" name="helpful" value="helpful"> Helpful
+    <input type="radio" name="notHelpful" value="notHelpful"> Not Helpful<br>
+    </form>
+    <br>
+    <input type="radio" name="up" value="voteUp"> Vote Up
+    <input type="radio" name="down" value="voteDown"> Vote Down<br>
+    </form>
+
+  </div>
+  `
+
 }
