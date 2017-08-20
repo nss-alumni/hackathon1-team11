@@ -32,9 +32,22 @@ function createFlashCard(title, question, answer, language) {
 
 function getCardByLanguage(language){
   try {
+    var card = firebase.database().ref('flashCards/' + language);
+      card.on('value', function(snapshot) {
+      console.log('cards...', snapshot.val())
+      console.log('cards...', snapshot.val().question)
 
+      // document.getElementById('LANGUAGE DIV').style.display = 'none';
+      document.getElementById('notecard').style.display = 'block';
+      document.getElementById('front').innerHTML = JSON.stringify(snapshot.val().question);
+      document.getElementById('back').innerHTML = JSON.stringify(snapshot.val().answer);
+
+      return snapshot.val()
+    // updateStarCount(postElement, snapshot.val());
+    });
   } catch (e) {
-
+    document.getElementById("error").innerHTML = 'Theres a problem, check console.';
+    console.log(e.message);
   } finally {
 
   }
