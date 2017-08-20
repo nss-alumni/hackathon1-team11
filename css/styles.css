@@ -84,7 +84,9 @@ body {
   -o-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
-
+.showView{
+    margin-top: 10px;
+}
 .devIcon {
     height: 75%;
     margin-top: 1em;
@@ -96,7 +98,9 @@ body {
   margin: 0 auto;
   height: 300px;
   width: 80%;
-  border: 1px solid black;
+  border: none;
+  border-radius: 2px;
+  box-shadow: 2px 2px 5px grey;
   background-image: -webkit-linear-gradient(top, #ffffff 15%, #F94545 16%, #ffffff 16%, #ffffff 25%, #85b2d3 26%, #ffffff 26%, #ffffff 35%, #85b2d3 36%, #ffffff 36%, #ffffff 45%, #85b2d3 46%, #ffffff 46%, #ffffff 55%, #85b2d3 56%, #ffffff 56%, #ffffff 65%, #85b2d3 66%, #ffffff 66%, #ffffff 75%, #85b2d3 76%, #ffffff 76%, #ffffff 85%, #85b2d3 86%, #ffffff 86%, #ffffff 95%, #85b2d3 96%, #ffffff 96%);
   background-image: linear-gradient(to bottom, #ffffff 15%, #F94545 16%, #ffffff 16%, #ffffff 25%, #85b2d3 26%, #ffffff 26%, #ffffff 35%, #85b2d3 36%, #ffffff 36%, #ffffff 45%, #85b2d3 46%, #ffffff 46%, #ffffff 55%, #85b2d3 56%, #ffffff 56%, #ffffff 65%, #85b2d3 66%, #ffffff 66%, #ffffff 75%, #85b2d3 76%, #ffffff 76%, #ffffff 85%, #85b2d3 86%, #ffffff 86%, #ffffff 95%, #85b2d3 96%, #ffffff 96%);
   -webkit-transition: 0.6s ease-in;
