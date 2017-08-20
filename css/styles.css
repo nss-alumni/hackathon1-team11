@@ -13,13 +13,6 @@
 
 	/* General styling */
 
-	body {
-		background:#E8E0DE;
-		font-family: NotethisRegular, Verdana, Arial, sans-serif;
-		font-size:200%;
-		color:#202020;
-	}
-
 	h1, h2, h3, h4, h5, h6 {
 		font-family: KulminoituvaRegular, "Arial Black", Gadget, sans-serif;
 		font-size:1.5em;
@@ -34,4 +27,75 @@
 
 .cardColumn {
   /*display: inline-block;*/
+.modelInput {
+    display: block;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  -webkit-perspective: 800px;
+  -moz-perspective: 800px;
+  perspective: 800px;
+  -webkit-perspective-origin: 50% 50%;
+  -moz-perspective-origin: 50% 50%;
+  perspective-origin: 50% 50%;
+  background:#E8E0DE;
+  font-family: NotethisRegular, Verdana, Arial, sans-serif;
+  font-size:200%;
+  color:#202020;
+}
+
+.notecard {
+  position: relative;
+  margin: 0 auto;
+  height: 300px;
+  width: 35%;
+  border: 1px solid black;
+  background-image: -webkit-linear-gradient(top, #ffffff 15%, #F94545 16%, #ffffff 16%, #ffffff 25%, #85b2d3 26%, #ffffff 26%, #ffffff 35%, #85b2d3 36%, #ffffff 36%, #ffffff 45%, #85b2d3 46%, #ffffff 46%, #ffffff 55%, #85b2d3 56%, #ffffff 56%, #ffffff 65%, #85b2d3 66%, #ffffff 66%, #ffffff 75%, #85b2d3 76%, #ffffff 76%, #ffffff 85%, #85b2d3 86%, #ffffff 86%, #ffffff 95%, #85b2d3 96%, #ffffff 96%);
+  background-image: linear-gradient(to bottom, #ffffff 15%, #F94545 16%, #ffffff 16%, #ffffff 25%, #85b2d3 26%, #ffffff 26%, #ffffff 35%, #85b2d3 36%, #ffffff 36%, #ffffff 45%, #85b2d3 46%, #ffffff 46%, #ffffff 55%, #85b2d3 56%, #ffffff 56%, #ffffff 65%, #85b2d3 66%, #ffffff 66%, #ffffff 75%, #85b2d3 76%, #ffffff 76%, #ffffff 85%, #85b2d3 86%, #ffffff 86%, #ffffff 95%, #85b2d3 96%, #ffffff 96%);
+  -webkit-transition: 0.6s ease-in;
+  -moz-transition: 0.6s ease-in;
+  transition: 0.6s ease-in;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.notecard:hover {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+.notecard p {
+  font: 1em/.9 "Lucida Grande", Helvetica, Sans-Serif;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.notecard p:first-child {
+  margin-top: 2em;
+}
+.notecard div {
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  width: 100%;
+  margin: 0 auto;
+}
+.notecard .front {
+  z-index: 100;
+}
+.notecard .back {
+  z-index: 50;
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  -o-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
 }

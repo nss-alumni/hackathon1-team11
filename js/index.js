@@ -8,7 +8,7 @@ function createFlashCard(title, question, answer, language) {
     var postData = {
       uid: uid,
       question: question,
-      answer, answer,
+      answer: answer,
       title: title,
       votesUp: 0,
       votesDown: 0,
