@@ -127,7 +127,7 @@ body {
 }
 .notecard:hover,
 .cardStack:hover {
-    box-shadow: 5px 5px 10px grey;
+    box-shadow: 6px 6px 12px black;
 }
 .notecard p {
   font: 1em/.9 "Lucida Grande", Helvetica, Sans-Serif;
