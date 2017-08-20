@@ -63,6 +63,8 @@ function getCardByLanguage(language){
       document.getElementById('splashPage').style.display = 'none';
       var el = document.getElementById('notecard');
       el.classList.remove('hidden');
+      var box = document.getElementById('boxOfMystery');
+      box.classList.remove('hidden');
       document.getElementById('front').innerHTML = JSON.stringify(card[i].question);
       document.getElementById('back').innerHTML = JSON.stringify(card[i].answer);
 

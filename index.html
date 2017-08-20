@@ -101,8 +101,6 @@
           <div class="col-sm-2"></div>
           <div class="col-sm-8">
               <h1 class="text-center" style="font-size:300%">Code Flash</h1>
-              <button class="btn btn-info center-block" onclick="createFlashCard('test2', 'test2', 'test2', 'test')">test function</button>
-              <button class="btn btn-info center-block" onclick="getCardByLanguage('python')">test language</button>
               <h3 id="error" class="text-center text-danger"></h3>
 
         </div>
@@ -148,6 +146,8 @@
     </div>
 
     <!-- /.container -->
+    <div class="text-center hidden" id="boxOfMystery">
+
     <div class="notecard hidden" id="notecard">
         <div class="front text-center" id="front" style="font-size:2em;">
 
@@ -156,24 +156,8 @@
 
         </div>
     </div>
-    <button type="button" name="button" class="btn btn-primary" id="nextCard">Next</button>
-
-    <!-- Slipe Show -->
-    <!-- <div class="container showView">
-        <div class="row container">
-            <div class="notecard col-sm-8 col-sm-offset-3" id="cardDetails">
-
-            </div>
-            <div class="col-sm-1">
-                <span class="glyphicon glyphicon-arrow-up"></span><br>
-                <span class="glyphicon glyphicon-star"></span><br>
-                <span class="glyphicon glyphicon-arrow-down"></span>
-            </div>
-        </div>
-        <div id="nextCard" class="col-sm-1 col-sm-offset-9">
-            <span class="glyphicon glyphicon-chevron-right"></span>
-        </div>
-    </div> -->
+    <button type="button" name="button" class="btn btn-primary" id="nextCard" style="margin:5px;">Next</button>
+  </div>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>

@@ -96,8 +96,9 @@ body {
 .notecard {
   position: relative;
   margin: 0 auto;
+	padding: 10px;
   height: 300px;
-  width: 80%;
+  width: 60%;
   border: none;
   border-radius: 2px;
   box-shadow: 2px 2px 5px grey;
