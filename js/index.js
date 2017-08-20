@@ -92,5 +92,9 @@ var cardHolder = document.getElementById("cardHolder");
 var cardType = document.getElementById("cardCatagoryInput");
 //event listener for create button
 createCardBtn.addEventListener("click", function() {
+  console.log(cardTitleInput.value);
+  console.log(cardFrontInput.value);
+  
+
   createFlashCard(cardTitleInput.value, cardFrontInput.value, cardBackInput.value, cardType.value);
 });
