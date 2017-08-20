@@ -24,10 +24,15 @@
 .logo h1,
 .logo img {
     display: inline;
+
 }
+.navbar {
+     padding-bottom: 10px;
+}
+
 .navbar-nav {
     margin-left: 50%;
-}
+}   
 .pageHeader {
     font-size:3.5em;
 }
@@ -113,12 +118,16 @@ body {
   -o-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
-.notecard:hover {
+.notecard:active {
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
   -ms-transform: rotateY(180deg);
   -o-transform: rotateY(180deg);
   transform: rotateY(180deg);
+}
+.notecard:hover,
+.cardStack:hover {
+    box-shadow: 5px 5px 10px grey;
 }
 .notecard p {
   font: 1em/.9 "Lucida Grande", Helvetica, Sans-Serif;
