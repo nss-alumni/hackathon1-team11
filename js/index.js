@@ -37,8 +37,9 @@ function getCardByLanguage(language){
       console.log('cards...', snapshot.val())
       console.log('cards...', snapshot.val().question)
 
-      // document.getElementById('LANGUAGE DIV').style.display = 'none';
-      document.getElementById('notecard').style.display = 'block';
+      document.getElementById('splashPage').style.display = 'none';
+      var el = document.getElementById('notecard');
+      el.classList.remove('hidden');
       document.getElementById('front').innerHTML = JSON.stringify(snapshot.val().question);
       document.getElementById('back').innerHTML = JSON.stringify(snapshot.val().answer);
 
