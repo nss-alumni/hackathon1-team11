@@ -19,7 +19,7 @@ function createFlashCard(title, question, answer, language) {
     var newPostKey = firebase.database().ref().child('flashCards').push().key;
     // Write the new post's data simultaneously in the posts list and the user's post list.
     var updates = {};
-    updates['/flashCards/' + postData.language] = postData;
+    updates['/flashCards/' + postData.language + '/' + newPostKey] = postData;
     updates['/user-posts/' + uid + '/' + newPostKey] = postData;
 
     return firebase.database().ref().update(updates);
@@ -32,13 +32,14 @@ function createFlashCard(title, question, answer, language) {
 
 function getCardByLanguage(language){
   try {
-    var card = firebase.database().ref('flashCards/' + language);
+      var card = firebase.database().ref('flashCards/' + language);
       card.on('value', function(snapshot) {
       console.log('cards...', snapshot.val())
       console.log('cards...', snapshot.val().question)
 
-      // document.getElementById('LANGUAGE DIV').style.display = 'none';
-      document.getElementById('notecard').style.display = 'block';
+      document.getElementById('splashPage').style.display = 'none';
+      var el = document.getElementById('notecard');
+      el.classList.remove('hidden');
       document.getElementById('front').innerHTML = JSON.stringify(snapshot.val().question);
       document.getElementById('back').innerHTML = JSON.stringify(snapshot.val().answer);
 
@@ -48,8 +49,6 @@ function getCardByLanguage(language){
   } catch (e) {
     document.getElementById("error").innerHTML = 'Theres a problem, check console.';
     console.log(e.message);
-  } finally {
-
   }
 }
 
