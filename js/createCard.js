@@ -9,7 +9,7 @@ createCardBtn.addEventListener("click", createCard);
 function createCard(){
   console.log("This function works");
   console.log(cardHolder, cardTitleInput.value);
-  cardHolder.innerHTML += `<div class="card">
+  cardHolder.innerHTML += `<div class="notecard">
     <h2>${cardTitleInput.value}</h2>
     <p>${cardFrontInput.value}</p>
   </div>`
