@@ -32,16 +32,39 @@ function createFlashCard(title, question, answer, language) {
 
 function getCardByLanguage(language){
   try {
-      var card = firebase.database().ref('flashCards/' + language);
-      card.on('value', function(snapshot) {
+      var cards = firebase.database().ref('flashCards/' + language);
+      cards.on('value', function(snapshot) {
       console.log('cards...', snapshot.val())
-      console.log('cards...', snapshot.val().question)
+      // console.log('cards...', snapshot.val().question)
+      var data = snapshot.val()
+      var card = {}
+      var cardList = [];
+
+      for (var i in data){
+        if (data.hasOwnProperty(i)){
+            card[i] = data[i];
+            cardList.push(card[i])
+
+            console.log('card i', card[i])
+            console.log('question,', card[i].question)
+        }
+      }
+
+      console.log('list...', cardList);
+
+      var nextCard = document.getElementById('nextCard')
+      nextCard.addEventListener('click', function(){
+        var item = cardList[Math.floor(Math.random()*cardList.length)];
+        console.log('item', item.question);
+        document.getElementById('front').innerHTML = JSON.stringify(item.question);
+        document.getElementById('back').innerHTML = JSON.stringify(item.answer);
+      })
 
       document.getElementById('splashPage').style.display = 'none';
       var el = document.getElementById('notecard');
       el.classList.remove('hidden');
-      document.getElementById('front').innerHTML = JSON.stringify(snapshot.val().question);
-      document.getElementById('back').innerHTML = JSON.stringify(snapshot.val().answer);
+      document.getElementById('front').innerHTML = JSON.stringify(card[i].question);
+      document.getElementById('back').innerHTML = JSON.stringify(card[i].answer);
 
       return snapshot.val()
     // updateStarCount(postElement, snapshot.val());
@@ -80,19 +103,3 @@ function googleSignout() {
       console.log('Signout Failed')
    });
 }
-
-// Create a Card Functionality
-var cardTitleInput = document.getElementById("cardTitleInput");
-var cardFrontInput = document.getElementById("cardFrontInput");
-var cardBackInput = document.getElementById("cardBackInput");
-var createCardBtn = document.getElementById("createCardBtn");
-var cardHolder = document.getElementById("cardHolder");
-var cardType = document.getElementById("cardCatagoryInput");
-//event listener for create button
-createCardBtn.addEventListener("click", function() {
-  console.log(cardTitleInput.value);
-  console.log(cardFrontInput.value);
-  
-
-  createFlashCard(cardTitleInput.value, cardFrontInput.value, cardBackInput.value, cardType.value);
-});
