@@ -103,3 +103,13 @@ function googleSignout() {
       console.log('Signout Failed')
    });
 }
+
+var cardTitleInput = document.getElementById("cardTitleInput");
+var cardFrontInput = document.getElementById("cardFrontInput");
+var cardBackInput = document.getElementById("cardBackInput");
+var createCardBtn = document.getElementById("createCardBtn");
+var cardHolder = document.getElementById("cardHolder");
+var cardType = document.getElementById("cardCatagoryInput");
+createCardBtn.addEventListener("click", function() {
+  createFlashCard(cardTitleInput.value, cardFrontInput.value, cardBackInput.value, cardType.value);
+});
