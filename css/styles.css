@@ -1,0 +1,37 @@
+
+	@font-face {
+	font-family: 'KulminoituvaRegular';
+	src: url('../fonts/kulminoituva.eot');
+	src: local('Kulminoituva Regular'), local('Kulminoituva'), url('../fonts/kulminoituva.woff') format('woff'), url('../fonts/kulminoituva.ttf') format('truetype'), url('../fonts/kulminoituva.svg#Kulminoituva') format('svg');
+}
+
+	@font-face {
+	font-family: 'NotethisRegular';
+	src: url('../fonts/Note_this.eot');
+	src: local('Note this Regular'), local('Notethis'), url('../fonts/Note_this.woff') format('woff'), url('../fonts/Note_this.ttf') format('truetype'), url('../fonts/Note_this.svg#Notethis') format('svg');
+}
+
+	/* General styling */
+
+	body {
+		background:#E8E0DE;
+		font-family: NotethisRegular, Verdana, Arial, sans-serif;
+		font-size:200%;
+		color:#202020;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		font-family: KulminoituvaRegular, "Arial Black", Gadget, sans-serif;
+		font-size:1.5em;
+	}
+
+.cardStack {
+  height: 175px;
+  width: 200px;
+  border: 2px solid black;
+  border-radius: 4px;
+}
+
+.cardColumn {
+  /*display: inline-block;*/
+}
