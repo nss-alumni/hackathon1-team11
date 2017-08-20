@@ -82,3 +82,15 @@ function googleSignout() {
       console.log('Signout Failed')
    });
 }
+
+// Create a Card Functionality
+var cardTitleInput = document.getElementById("cardTitleInput");
+var cardFrontInput = document.getElementById("cardFrontInput");
+var cardBackInput = document.getElementById("cardBackInput");
+var createCardBtn = document.getElementById("createCardBtn");
+var cardHolder = document.getElementById("cardHolder");
+var cardType = document.getElementById("cardCatagoryInput");
+//event listener for create button
+createCardBtn.addEventListener("click", function() {
+  createFlashCard(cardTitleInput.value, cardFrontInput.value, cardBackInput.value, cardType.value);
+});
