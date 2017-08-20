@@ -17,10 +17,9 @@ function createFlashCard(title, question, answer, language) {
 
     // Get a key for a new Post.
     var newPostKey = firebase.database().ref().child('flashCards').push().key;
-
     // Write the new post's data simultaneously in the posts list and the user's post list.
     var updates = {};
-    updates['/flashCards/' + newPostKey] = postData;
+    updates['/flashCards/' + postData.language] = postData;
     updates['/user-posts/' + uid + '/' + newPostKey] = postData;
 
     return firebase.database().ref().update(updates);
@@ -31,10 +30,15 @@ function createFlashCard(title, question, answer, language) {
 
 }
 
+function getCardByLanguage(language){
+  try {
 
+  } catch (e) {
 
+  } finally {
 
-
+  }
+}
 
 var provider = new firebase.auth.GoogleAuthProvider();
 function googleSignin() {
