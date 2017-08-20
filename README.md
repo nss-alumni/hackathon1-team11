@@ -13,7 +13,7 @@ Flash Card Game, LLC.
 
 ## Installation
 1. ```git clone <repo address>``` into a local directory of your choosing.
-
+1. NPM install -- Install the dependencies in the local node_modules folder. In global mode (ie, with -g or --global appended to the command), it installs the current package context (ie, the current working directory) as a global package. By default, npm install will install all modules listed as dependencies in package.json -- https://docs.npmjs.com/
 
 ## Usage
 1.
